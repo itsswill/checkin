@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('checkin', 'CheckinController@index');
+Route::post('checkin', 'CheckinController@addStudent');

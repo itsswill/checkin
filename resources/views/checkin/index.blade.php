@@ -693,13 +693,13 @@
     </div>
   
     <!-- / main header -->
-<form action="checkin.index.php" method="post">
+<form action="routes.php" method="post">
     First name:<br>
     <input type="text" name="firstname"><br>
     Last name:<br>
     <input type="text" name="lastname"><br><br>
-    <input type="radio" name="checkin" value="checkin" checked> Check In<br>
-    <input type="radio" name="checkout" value="checkout"> Check Out<br>
+    <input type="radio" name="checkin" value="checkin"> Check In<br>
+  <input type="radio" name="checkout" value="checkout"> Check Out<br>
     <input type="submit" value="Submit">
 </form>
 

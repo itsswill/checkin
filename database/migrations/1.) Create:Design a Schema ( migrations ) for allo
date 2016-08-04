@@ -1,0 +1,14 @@
+1.) Create/Design a Schema ( migrations ) for allowing students to be inserted into the database, and also allowing each student to checkin and checkout.
+
+2.) Create Views for each thing ( inserting a student could be a form to insert students )
+								( checking in a student could be a form as well )
+
+3.) Use the template that I downloaded in your downloads folder. ( there is an HTML file there )
+
+4.) transfer the assets from the template html folder into laravel
+
+5.) convert the HTML in that folder into blade
+
+6.) Give it functionality through a controller and a route
+
+7.) USE GIT TO ADD COMMIT AND PUSH

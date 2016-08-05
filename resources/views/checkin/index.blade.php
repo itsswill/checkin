@@ -693,13 +693,11 @@
     </div>
   
     <!-- / main header -->
-<form action="routes.php" method="post">
+<form action="checkin.blade.php" method="post">
     First name:<br>
-    <input type="text" name="firstname"><br>
+    <input type="text" name="first_name"><br>
     Last name:<br>
-    <input type="text" name="lastname"><br><br>
-    <input type="radio" name="checkin" value="checkin"> Check In<br>
-  <input type="radio" name="checkout" value="checkout"> Check Out<br>
+    <input type="text" name="last_name"><br>
     <input type="submit" value="Submit">
 </form>
 

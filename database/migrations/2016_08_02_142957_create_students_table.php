@@ -16,7 +16,7 @@ class CreateStudentsTable extends Migration
             $table->increments('id');
             $table->string('first_name');
             $table->string('last_name');
-            $table->text('comment');
+            $table->text('comment')->nullable();
             $table->datetime('checkin');
             $table->datetime('checkout');
             $table->timestamps();

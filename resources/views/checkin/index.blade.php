@@ -2,7 +2,7 @@
 <html lang="en" class="">
 <head>
   <meta charset="utf-8" />
-  <title>Html version | Angulr</title>
+  <title>Daycare| Check In</title>
   <meta name="description" content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="{{ URL::asset('libs/assets/animate.css/animate.css') }}" type="text/css" />
@@ -46,117 +46,11 @@
             <i class="fa fa-dedent fa-fw text"></i>
             <i class="fa fa-indent fa-fw text-active"></i>
           </a>
-          <a href="#" class="btn no-shadow navbar-btn" ui-toggle-class="show" target="#aside-user">
-            <i class="icon-user fa-fw"></i>
-          </a>
         </div>
         <!-- / buttons -->
 
         <!-- link and dropdown -->
-        <ul class="nav navbar-nav hidden-sm">
-          <li class="dropdown pos-stc">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-              <span>Mega</span> 
-              <span class="caret"></span>
-            </a>
-            <div class="dropdown-menu wrapper w-full bg-white">
-              <div class="row">
-                <div class="col-sm-4">
-                  <div class="m-l-xs m-t-xs m-b-xs font-bold">Pages <span class="badge badge-sm bg-success">10</span></div>
-                  <div class="row">
-                    <div class="col-xs-6">
-                      <ul class="list-unstyled l-h-2x">
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Profile</a>
-                        </li>
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Post</a>
-                        </li>
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Search</a>
-                        </li>
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Invoice</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-xs-6">
-                      <ul class="list-unstyled l-h-2x">
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Price</a>
-                        </li>
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Lock screen</a>
-                        </li>
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sign in</a>
-                        </li>
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sign up</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 b-l b-light">
-                  <div class="m-l-xs m-t-xs m-b-xs font-bold">UI Kits <span class="label label-sm bg-primary">12</span></div>
-                  <div class="row">
-                    <div class="col-xs-6">
-                      <ul class="list-unstyled l-h-2x">
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Buttons</a>
-                        </li>
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Icons <span class="badge badge-sm bg-warning">1000+</span></a>
-                        </li>
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Grid</a>
-                        </li>
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Widgets</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-xs-6">
-                      <ul class="list-unstyled l-h-2x">
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Bootstap</a>
-                        </li>
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sortable</a>
-                        </li>
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Portlet</a>
-                        </li>
-                        <li>
-                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Timeline</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 b-l b-light">
-                  <div class="m-l-xs m-t-xs m-b-sm font-bold">Analysis</div>
-                  <div class="text-center">
-                    <div class="inline">
-                      <div ui-jq="easyPieChart" ui-options="{
-                          percent: 65,
-                          lineWidth: 50,
-                          trackColor: '#e8eff0',
-                          barColor: '#23b7e5',
-                          scaleColor: false,
-                          size: 100,
-                          rotate: 90,
-                          lineCap: 'butt',
-                          animate: 2000
-                        }">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
+
           <li class="dropdown">
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
               <i class="fa fa-fw fa-plus visible-xs-inline-block"></i>
@@ -183,17 +77,7 @@
         </ul>
         <!-- / link and dropdown -->
 
-        <!-- search form -->
-        <form class="navbar-form navbar-form-sm navbar-left shift" ui-shift="prependTo" data-target=".navbar-collapse" role="search" ng-controller="TypeaheadDemoCtrl">
-          <div class="form-group">
-            <div class="input-group">
-              <input type="text" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control input-sm bg-light no-border rounded padder" placeholder="Search projects...">
-              <span class="input-group-btn">
-                <button type="submit" class="btn btn-sm bg-light rounded"><i class="fa fa-search"></i></button>
-              </span>
-            </div>
-          </div>
-        </form>
+        <!-- search form -->  
         <!-- / search form -->
 
         <!-- nabar right -->
@@ -234,45 +118,9 @@
               </div>
             </div>
             <!-- / dropdown -->
-          </li>
-          <li class="dropdown">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
-              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-                <img src="img/a0.jpg" alt="...">
-                <i class="on md b-white bottom"></i>
-              </span>
-              <span class="hidden-sm hidden-md">John.Smith</span> <b class="caret"></b>
-            </a>
+
             <!-- dropdown -->
-            <ul class="dropdown-menu animated fadeInRight w">
-              <li class="wrapper b-b m-b-sm bg-light m-t-n-xs">
-                <div>
-                  <p>300mb of 500mb used</p>
-                </div>
-                <div class="progress progress-xs m-b-none dker">
-                  <div class="progress-bar progress-bar-info" data-toggle="tooltip" data-original-title="50%" style="width: 50%"></div>
-                </div>
-              </li>
-              <li>
-                <a href>
-                  <span class="badge bg-danger pull-right">30%</span>
-                  <span>Settings</span>
-                </a>
-              </li>
-              <li>
-                <a ui-sref="app.page.profile">Profile</a>
-              </li>
-              <li>
-                <a ui-sref="app.docs">
-                  <span class="label bg-info pull-right">new</span>
-                  Help
-                </a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a ui-sref="access.signin">Logout</a>
-              </li>
-            </ul>
+
             <!-- / dropdown -->
           </li>
         </ul>
@@ -290,48 +138,8 @@
           <!-- user -->
           <div class="clearfix hidden-xs text-center hide" id="aside-user">
             <div class="dropdown wrapper">
-              <a href="app.page.profile">
-                <span class="thumb-lg w-auto-folded avatar m-t-sm">
-                  <img src="img/a0.jpg" class="img-full" alt="...">
-                </span>
-              </a>
-              <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
-                <span class="clear">
-                  <span class="block m-t-sm">
-                    <strong class="font-bold text-lt">John.Smith</strong> 
-                    <b class="caret"></b>
-                  </span>
-                  <span class="text-muted text-xs block">Art Director</span>
-                </span>
-              </a>
+              
               <!-- dropdown -->
-              <ul class="dropdown-menu animated fadeInRight w hidden-folded">
-                <li class="wrapper b-b m-b-sm bg-info m-t-n-xs">
-                  <span class="arrow top hidden-folded arrow-info"></span>
-                  <div>
-                    <p>300mb of 500mb used</p>
-                  </div>
-                  <div class="progress progress-xs m-b-none dker">
-                    <div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="50%" style="width: 50%"></div>
-                  </div>
-                </li>
-                <li>
-                  <a href>Settings</a>
-                </li>
-                <li>
-                  <a href="page_profile.html">Profile</a>
-                </li>
-                <li>
-                  <a href>
-                    <span class="badge bg-danger pull-right">3</span>
-                    Notifications
-                  </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                  <a href="page_signin.html">Logout</a>
-                </li>
-              </ul>
               <!-- / dropdown -->
             </div>
             <div class="line dk hidden-folded"></div>
@@ -342,36 +150,7 @@
           <nav ui-nav class="navi clearfix">
             <ul class="nav">
               <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-                <span>Navigation</span>
-              </li>
-              <li>
-                <a href class="auto">      
-                  <span class="pull-right text-muted">
-                    <i class="fa fa-fw fa-angle-right text"></i>
-                    <i class="fa fa-fw fa-angle-down text-active"></i>
-                  </span>
-                  <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
-                  <span class="font-bold">Dashboard</span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a href>
-                      <span>Dashboard</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="index.html">
-                      <span>Dashboard v1</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="dashboard.html">
-                      <b class="label bg-info pull-right">N</b>
-                      <span>Dashboard v2</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
+
               <li>
                 <a href="mail.html">
                   <b class="badge bg-info pull-right">9</b>
@@ -380,272 +159,9 @@
                 </a>
               </li>
               <li class="line dk"></li>
-
-              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-                <span>Components</span>
-              </li>
-              <li>
-                <a href class="auto">      
-                  <span class="pull-right text-muted">
-                    <i class="fa fa-fw fa-angle-right text"></i>
-                    <i class="fa fa-fw fa-angle-down text-active"></i>
-                  </span>
-                  <b class="badge bg-info pull-right">3</b>
-                  <i class="glyphicon glyphicon-th"></i>
-                  <span>Layout</span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a href>
-                      <span>Layout</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="layout_app.html">
-                      <span>Application</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="layout_fullwidth.html">
-                      <span>Full width</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="layout_boxed.html">
-                      <span>Boxed layout</span>
-                    </a>
-                  </li>      
-                </ul>
-              </li>
-              <li>
-                <a href class="auto">
-                  <span class="pull-right text-muted">
-                    <i class="fa fa-fw fa-angle-right text"></i>
-                    <i class="fa fa-fw fa-angle-down text-active"></i>
-                  </span>
-                  <i class="glyphicon glyphicon-briefcase icon"></i>
-                  <span>UI Kits</span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a href>
-                      <span>UI Kits</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui_button.html">
-                      <span>Buttons</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui_icon.html">
-                      <b class="badge bg-info pull-right">3</b>
-                      <span>Icons</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui_grid.html">
-                      <span>Grid</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui_widget.html">
-                      <b class="badge bg-success pull-right">13</b>
-                      <span>Widgets</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui_sortable.html">
-                      <span>Sortable</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui_portlet.html">
-                      <span>Portlet</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui_timeline.html">
-                      <span>Timeline</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui_jvectormap.html">
-                      <span>Vector Map</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href class="auto">
-                  <span class="pull-right text-muted">
-                    <i class="fa fa-fw fa-angle-right text"></i>
-                    <i class="fa fa-fw fa-angle-down text-active"></i>
-                  </span>
-                  <b class="label bg-primary pull-right">2</b>
-                  <i class="glyphicon glyphicon-list"></i>
-                  <span>Table</span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a href>
-                      <span>Table</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="table_static.html">
-                      <span>Table static</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="table_datatable.html">
-                      <span>Datatable</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="table_footable.html">
-                      <span>Footable</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href class="auto">
-                  <span class="pull-right text-muted">
-                    <i class="fa fa-fw fa-angle-right text"></i>
-                    <i class="fa fa-fw fa-angle-down text-active"></i>
-                  </span>
-                  <i class="glyphicon glyphicon-edit"></i>
-                  <span>Form</span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a href>
-                      <span>Form</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="form_element.html">
-                      <span>Form elements</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="ui_chart.html">
-                  <i class="glyphicon glyphicon-signal"></i>
-                  <span>Chart</span>
-                </a>
-              </li>
-              <li>
-                <a href class="auto">
-                  <span class="pull-right text-muted">
-                    <i class="fa fa-fw fa-angle-right text"></i>
-                    <i class="fa fa-fw fa-angle-down text-active"></i>
-                  </span>
-                  <i class="glyphicon glyphicon-file icon"></i>
-                  <span>Pages</span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a href>
-                      <span>Pages</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="page_profile.html">
-                      <span>Profile</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="page_post.html">
-                      <span>Post</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="page_search.html">
-                      <span>Search</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="page_invoice.html">
-                      <span>Invoice</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="page_price.html">
-                      <span>Price</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="page_lockme.html">
-                      <span>Lock screen</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="page_signin.html">
-                      <span>Signin</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="page_signup.html">
-                      <span>Signup</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="page_forgotpwd.html">
-                      <span>Forgot password</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="page_404.html">
-                      <span>404</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="line dk hidden-folded"></li>
-
-              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">          
-                <span>Your Stuff</span>
-              </li>  
-              <li>
-                <a href="page_profile.html">
-                  <i class="icon-user icon text-success-lter"></i>
-                  <b class="badge bg-success pull-right">30%</b>
-                  <span>Profile</span>
-                </a>
-              </li>
-              <li>
-                <a href>
-                  <i class="icon-question icon"></i>
-                  <span>Documents</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
           <!-- nav -->
 
           <!-- aside footer -->
-          <div class="wrapper m-t">
-            <div class="text-center-folded">
-              <span class="pull-right pull-none-folded">60%</span>
-              <span class="hidden-folded">Milestone</span>
-            </div>
-            <div class="progress progress-xxs m-t-sm dk">
-              <div class="progress-bar progress-bar-info" style="width: 60%;">
-              </div>
-            </div>
-            <div class="text-center-folded">
-              <span class="pull-right pull-none-folded">35%</span>
-              <span class="hidden-folded">Release</span>
-            </div>
-            <div class="progress progress-xxs m-t-sm dk">
-              <div class="progress-bar progress-bar-primary" style="width: 35%;">
-              </div>
-            </div>
-          </div>
           <!-- / aside footer -->
         </div>
       </div>
@@ -668,28 +184,9 @@
     <div class="bg-light lter b-b wrapper-md">
       <div class="row">
         <div class="col-sm-6 col-xs-12">
-          <h1 class="m-n font-thin h3 text-black">Dashboard</h1>
-          <small class="text-muted">Welcome to angulr application</small>
+          <h1 class="m-n font-thin h3 text-black">Attendance Sign In</h1>
+          <small class="text-muted">Welcome!</small>
         </div>
-        <div class="col-sm-6 text-right hidden-xs">
-          <div class="inline m-r text-left">
-            <div class="m-b-xs">1290 <span class="text-muted">items</span></div>
-            <div ng-init="d3_1=[ 106,108,110,105,110,109,105,104,107,109,105,100,105,102,101,99,98 ]" 
-              ui-jq="sparkline" 
-              ui-options="[ 106,108,110,105,110,109,105,104,107,109,105,100,105,102,101,99,98 ], {type:'bar', height:20, barWidth:5, barSpacing:1, barColor:'#dce5ec'}" 
-              class="sparkline inline">loading...
-            </div>
-          </div>
-          <div class="inline text-left">
-            <div class="m-b-xs">$30,000 <span class="text-muted">revenue</span></div>
-            <div ng-init="d3_2=[ 105,102,106,107,105,104,101,99,98,109,105,100,108,110,105,110,109 ]" 
-              ui-jq="sparkline" 
-              ui-options="[ 105,102,106,107,105,104,101,99,98,109,105,100,108,110,105,110,109 ], {type:'bar', height:20, barWidth:5, barSpacing:1, barColor:'#dce5ec'}" 
-              class="sparkline inline">loading...
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   
     <!-- / main header -->
@@ -698,6 +195,11 @@
     <input type="text" name="first_name"><br>
     Last name:<br>
     <input type="text" name="last_name"><br>
+    <br>
+    <div>
+<textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">Any Comments?
+</textarea><br>
+</div>
     <input type="submit" value="Submit">
 </form>
 
@@ -712,26 +214,7 @@
   </div>
   <!-- / main -->
   <!-- right col -->
-  <div class="col w-md bg-white-only b-l bg-auto no-border-xs">
-    <div class="nav-tabs-alt" >
-      <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-          <a data-target="#tab-1" role="tab" data-toggle="tab">
-            <i class="glyphicon glyphicon-user text-md text-muted wrapper-sm"></i>
-          </a>
-        </li>
-        <li>
-          <a data-target="#tab-2" role="tab" data-toggle="tab">
-            <i class="glyphicon glyphicon-comment text-md text-muted wrapper-sm"></i>
-          </a>
-        </li>
-        <li>
-          <a data-target="#tab-3" role="tab" data-toggle="tab">
-            <i class="glyphicon glyphicon-transfer text-md text-muted wrapper-sm"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
+
 <!-- who to follow -->
 <!-- who to follow -->
 <!-- chats -->
@@ -757,36 +240,6 @@
         <div class="cell">
           <div class="cell-inner padder">
             <!-- chat list -->
-            <div class="m-b">
-              <a href class="pull-left thumb-xs avatar"><img src="img/a2.jpg" alt="..."></a>
-              <div class="clear">
-                <div class="pos-rlt wrapper-sm b b-light r m-l-sm">
-                  <span class="arrow left pull-up"></span>
-                  <p class="m-b-none">Hi John, What's up...</p>
-                </div>
-                <small class="text-muted m-l-sm"><i class="fa fa-ok text-success"></i> 2 minutes ago</small>
-              </div>
-            </div>
-            <div class="m-b">
-              <a href class="pull-right thumb-xs avatar"><img src="img/a3.jpg" class="img-circle" alt="..."></a>
-              <div class="clear">
-                <div class="pos-rlt wrapper-sm bg-light r m-r-sm">
-                  <span class="arrow right pull-up arrow-light"></span>
-                  <p class="m-b-none">Lorem ipsum dolor :)</p>
-                </div>
-                <small class="text-muted">1 minutes ago</small>
-              </div>
-            </div>
-            <div class="m-b">
-              <a href class="pull-left thumb-xs avatar"><img src="img/a2.jpg" alt="..."></a>
-              <div class="clear">
-                <div class="pos-rlt wrapper-sm b b-light r m-l-sm">
-                  <span class="arrow left pull-up"></span>
-                  <p class="m-b-none">Great!</p>
-                </div>
-                <small class="text-muted m-l-sm"><i class="fa fa-ok text-success"></i>Just Now</small>
-              </div>
-            </div>
             <!-- / chat list -->
           </div>
         </div>

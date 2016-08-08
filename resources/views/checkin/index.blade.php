@@ -8,7 +8,7 @@
         <div class="panel-heading font-bold">Create Student</div>
         <div class="panel-body">
 
-          <form role="form" action="/student/create" method="post">
+          <form role="form" action="/students/create" method="post">
 
             <div class="form-group">
               <label>First Name</label>
@@ -18,6 +18,11 @@
             <div class="form-group">
               <label>Last Name</label>
               <input type="text" name="last_name" class="form-control" placeholder="">
+            </div>
+
+            <div class="form-group" >
+                <label>Date Of Birth</label>
+                <input type="text" name="dob" class="form-control" placeholder="">
             </div>
 
               <input type="hidden" name="_method" value="POST">

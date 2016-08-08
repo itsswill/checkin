@@ -5,10 +5,9 @@
               </li>
               
               <li>
-                <a href="mail.html">
-                  <b class="badge bg-info pull-right">9</b>
-                  <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
-                  <span class="font-bold">Students</span>
+                <a href="/checkin">
+                  <i class="glyphicon glyphicon-user icon text-info-lter"></i>
+                  <span class="font-bold">Create Student</span>
                 </a>
               </li>
             </ul>

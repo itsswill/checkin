@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('checkin', 'CheckinController@index');
-Route::post('checkin', 'CheckinController@addStudent');
+Route::get('students/create', 'StudentController@index');
+Route::post('students/create', 'StudentController@store');

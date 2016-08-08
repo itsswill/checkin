@@ -10,5 +10,11 @@
                   <span class="font-bold">Create Student</span>
                 </a>
               </li>
+                <li>
+                    <a href="/checkin">
+                        <i class="glyphicon glyphicon-user icon text-info-lter"></i>
+                        <span class="font-bold">Create Guardian</span>
+                    </a>
+                </li>
             </ul>
           </nav>

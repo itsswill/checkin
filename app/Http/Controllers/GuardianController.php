@@ -14,7 +14,7 @@ class GuardianController extends Controller
     }
 
     /**
-     * Saves New Student in database
+     * Saves New Guardian in database
      */
     public function store(Request $request){
         $firstName = $request->input('first_name');

@@ -12,7 +12,7 @@ class StudentController extends Controller
 {
     public function index()
     {
-        return view ('checkin.index');
+        return view ('student.create');
     }
 
     /**

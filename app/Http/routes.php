@@ -11,5 +11,8 @@
 |
 */
 
-Route::get('students/create', 'StudentController@index');
-Route::post('students/create', 'StudentController@store');
+Route::get('student/create', 'StudentController@index');
+Route::post('student/create', 'StudentController@store');
+
+Route::get('guardian/create', 'GuardianController@index');
+Route::post('guardian/create', 'GuardianController@store');

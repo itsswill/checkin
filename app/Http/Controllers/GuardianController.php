@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use \DateTime;
 use App\Guardian;
+use App\Student;
 
 class GuardianController extends Controller
 {
     public function index(){
-        return view('guardian.create');
+        $students = Student::all();
+        return view('guardian.create', ['students' => $students]);
     }
 
     /**

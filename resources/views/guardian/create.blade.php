@@ -60,6 +60,9 @@
 
                 <table class="table table-striped m-b-none">
                     <thead>
+                    <tr>
+                        <th></th>
+                    </tr>
                         <tr>
                             <th>First Name</th>
                             <th>Last Name</th>
@@ -69,6 +72,7 @@
                     <tbody>
                         @foreach($students as $student)
                          <tr>
+                             <td><input type="checkbox"></td>
                              <td>{{ $student->first_name  }}</td>
                              <td>{{ $student->last_name  }}</td>
                              <td>{{ $student->dob  }}</td>

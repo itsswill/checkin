@@ -13,6 +13,15 @@
   <link rel="stylesheet" href="{{ asset('css/font.css')  }}" type="text/css" />
   <link rel="stylesheet" href="{{ asset('css/app.css')  }}" type="text/css" />
 
+  <script src="{{ asset('/libs/jquery/jquery/dist/jquery.js')}}"></script>
+  <script src="{{ asset('/libs/jquery/bootstrap/dist/js/bootstrap.js')}}"></script>
+  <script src="{{ asset('js/ui-load.js')}}"></script>
+  <script src="{{ asset('js/ui-jp.config.js')}}"></script>
+  <script src="{{ asset('js/ui-jp.js')}}"></script>
+  <script src="{{ asset('js/ui-nav.js')}}"></script>
+  <script src="{{ asset('js/ui-toggle.js')}}"></script>
+  <script src="{{ asset('js/ui-client.js')}}"></script>
+
 </head>
 <body>
 <div class="app app-header-fixed ">
@@ -74,14 +83,6 @@
 
 </div>
 
-<script src="{{ asset('/libs/jquery/jquery/dist/jquery.js')}}"></script>
-<script src="{{ asset('/libs/jquery/bootstrap/dist/js/bootstrap.js')}}"></script>
-<script src="{{ asset('js/ui-load.js')}}"></script>
-<script src="{{ asset('js/ui-jp.config.js')}}"></script>
-<script src="{{ asset('js/ui-jp.js')}}"></script>
-<script src="{{ asset('js/ui-nav.js')}}"></script>
-<script src="{{ asset('js/ui-toggle.js')}}"></script>
-<script src="{{ asset('js/ui-client.js')}}"></script>
 
 </body>
 </html>

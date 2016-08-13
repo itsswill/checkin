@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use \DateTime;
 use App\Guardian;
+use App\GuardianStudent;
 use App\Student;
 
 class GuardianController extends Controller
@@ -26,6 +27,9 @@ class GuardianController extends Controller
         $province = $request->input('province');
         $postalCode = $request->input('postal_code');
         $phoneNumber = $request->input('phone_number');
+        $studentIds = $request->input('student_ids');
+        $studentIds = explode('|', $studentIds); //array studentIds
+
 
         $guardian = new Guardian;
         $guardian->first_name = $firstName;
@@ -36,6 +40,15 @@ class GuardianController extends Controller
         $guardian->postal_code = $postalCode;
         $guardian->phone_number = $phoneNumber;
         $guardian->save();
+
+
+        foreach($studentIds as $student)
+        {
+            $attach = new GuardianStudent;
+            $attach->student_id = $student;
+            $attach->guardian_id = $guardian->id;
+            $attach->save();
+        }
     }
 
 }

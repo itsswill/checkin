@@ -49,6 +49,8 @@
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 
+                            <input type="hidden" name="student_ids" value="">
+
                             <button type="submit" class="btn btn-sm btn-primary">Submit</button>
                         </form>
 
@@ -72,7 +74,7 @@
                     <tbody>
                         @foreach($students as $student)
                          <tr>
-                             <td><input type="checkbox"></td>
+                             <td><input type="checkbox" data-id="{{ $student->id }}"></td>
                              <td>{{ $student->first_name  }}</td>
                              <td>{{ $student->last_name  }}</td>
                              <td>{{ $student->dob  }}</td>
@@ -84,5 +86,33 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+
+        $(document).ready(function(){
+            var studentIds = [];
+
+            $("input[type=checkbox]").on('click', function(){
+
+                var student_id = $(this).attr('data-id');
+
+               if($(this).is(':checked')){
+                   //something happens on click of a checkbox
+                   studentIds.push(student_id); //this pushes into array
+               }else{
+
+                   var index = studentIds.indexOf(student_id);
+                   studentIds.splice(index, 1);
+               }
+
+                //join our array
+                var studentString = studentIds.join("|");
+                $("input[name=student_ids]").val(studentString);
+            });
+
+
+        });
+    </script>
 
 @stop

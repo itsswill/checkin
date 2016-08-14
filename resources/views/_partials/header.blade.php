@@ -10,9 +10,7 @@
         </button>
         <!-- brand -->
         <a href="#/" class="navbar-brand text-lt">
-          <i class="fa fa-btc"></i>
-          <img src="img/logo.png" alt="." class="hide">
-          <span class="hidden-folded m-l-xs">Angulr</span>
+          <span class="hidden-folded m-l-xs">Daycare System</span>
         </a>
         <!-- / brand -->
       </div>
@@ -25,9 +23,6 @@
           <a href="#" class="btn no-shadow navbar-btn" ui-toggle-class="app-aside-folded" target=".app">
             <i class="fa fa-dedent fa-fw text"></i>
             <i class="fa fa-indent fa-fw text-active"></i>
-          </a>
-          <a href="#" class="btn no-shadow navbar-btn" ui-toggle-class="show" target="#aside-user">
-            <i class="icon-user fa-fw"></i>
           </a>
         </div>
         <!-- / buttons -->

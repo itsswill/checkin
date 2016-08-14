@@ -16,3 +16,6 @@ Route::post('students/create', 'StudentController@store');
 
 Route::get('guardian/create', 'GuardianController@index');
 Route::post('guardian/create', 'GuardianController@store');
+
+Route::get('attendance/create', 'AttendanceController@index');
+Route::post('attendance/create', 'AttendanceController@store');

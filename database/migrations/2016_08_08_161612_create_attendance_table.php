@@ -19,8 +19,8 @@ class CreateAttendanceTable extends Migration
 
             $table->integer('guardian_id')->unsigned();
             $table->foreign('guardian_id')->references('id')->on('guardians');
-            $table->dateTime('checkin');
-            $table->dateTime('checkout');
+            $table->dateTime('checkin')->nullable();
+            $table->dateTime('checkout')->nullable();
             $table->text('comment')->nullable();
         });
     }

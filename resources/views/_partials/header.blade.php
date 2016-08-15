@@ -29,15 +29,10 @@
 
         
 
-        <!-- nabar right -->
-
-            <!-- dropdown -->
-
-            <!-- / dropdown -->
-          </li>
-            <!-- / dropdown -->
-          </li>
-        </ul>
+        <!-- navbar right -->
+        <div>
+          <div class="pull-right m-t">Today is {{ date('l, M j Y')  }}</div>
+        </div>
         <!-- / navbar right -->
       </div>
       <!-- / navbar collapse -->

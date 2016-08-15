@@ -8,6 +8,7 @@ use \DateTime;
 use App\Guardian;
 use App\GuardianStudent;
 use App\Student;
+use Carbon\Carbon;
 
 class GuardianController extends Controller
 {
@@ -22,6 +23,7 @@ class GuardianController extends Controller
     public function store(Request $request){
         $firstName = $request->input('first_name');
         $lastName = $request->input('last_name');
+        $dob = new Carbon($request->input('dob'));
         $addressName = $request->input('address');
         $city = $request->input('city');
         $province = $request->input('province');
@@ -34,6 +36,7 @@ class GuardianController extends Controller
         $guardian = new Guardian;
         $guardian->first_name = $firstName;
         $guardian->last_name = $lastName;
+        $guardian->dob = $dob;
         $guardian->address = $addressName;
         $guardian->city = $city;
         $guardian->province = $province;

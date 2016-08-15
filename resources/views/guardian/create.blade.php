@@ -21,6 +21,11 @@
                                 <input type="text" name="last_name" class="form-control" placeholder="">
                             </div>
 
+                            <div class="form-group">
+                                <label>Date of Birth</label>
+                                <input type="text" name="dob" class="form-control" placeholder="">
+                            </div>
+
                             <div class="form-group" >
                                 <label>Address</label>
                                 <input type="text" name="address" class="form-control" placeholder="">
@@ -63,10 +68,8 @@
 
                 <table class="table table-striped m-b-none">
                     <thead>
-                    <tr>
-                        <th></th>
-                    </tr>
                         <tr>
+                            <th></th>
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Date of Birth</th>

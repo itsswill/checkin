@@ -2,10 +2,15 @@
 @section('content')
 
     <div class="wrapper-md">
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="font-bold">Check In / Check Out</div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-sm-12">
-                <div class="panel-heading font-bold">Check In / Check Out</div>
-
                 <table class="table table-striped m-b-none">
                     <thead>
                     <tr>
@@ -14,42 +19,50 @@
                     <tr>
                         <th>Check In</th>
                         <th>Check Out</th>
+                        <th>Guardian</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Date of Birth</th>
                         <th>...Comments...</th>
+                        <th>&nbsp;</th>
 
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($students as $student)
+                        <form role="form" action="/attendance/create" method="post">
                         <tr>
-                            <td><input type="checkbox" data-id="{{ $student->id }}"></td>
-                            <td><input type="checkbox" data-id="{{ $student->id }}"></td>
+                            <td><input type="checkbox" name="checkin" value="in"></td>
+                            <td><input type="checkbox" name="checkout" value="out"></td>
+                            <td>
+                                <select name="guardian_id" class="form-control">
+                                    @foreach($student->guardians as $guardian)
+                                    <option value="{{ $guardian->guardian_id  }}">{{ $guardian->first_name  }} {{ $guardian->last_name  }}</option>
+                                    @endforeach
+                                </select>
+                            </td>
                             <td>{{ $student->first_name  }}</td>
                             <td>{{ $student->last_name  }}</td>
                             <td>{{ $student->dob  }}</td>
 
                             <td>
-                                <textarea rows="5"
-                                          cols="60"
-                                          name="comment" form="usrform">
-                                    Enter text here...
-                                </textarea>
+                                <textarea class="form-control" name="comment" placeholder="enter text here..."></textarea>
 
                                 <input type="hidden" name="_method" value="POST">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                <input type="hidden" name="student_ids" value="">
+                                <input type="hidden" name="student_id" value="{{ $student->id  }}">
+
+                            <td>
+                                <input type="submit" class="btn btn-sm btn-primary m-t" value="Submit">
                             </td>
                         </tr>
+                        </form>
                     @endforeach
                     </tbody>
                 </table>
-                <form role="form" action="/attendance/create" method="post">
-                    <button type="submit" class="btn btn-sm btn-primary">Submit</button>
-                </form
             </div>
         </div>
+
     </div>
 
 

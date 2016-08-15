@@ -6,6 +6,7 @@
             <div class="col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading font-bold">Create Guardian</div>
+
                     <div class="panel-body">
 
                         <form role="form" action="/guardian/create" method="post">

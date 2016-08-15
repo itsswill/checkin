@@ -10,7 +10,10 @@ use App\GuardianStudent;
 use App\Student;
 class AttendanceController extends Controller
 {
-    public function index(){
-        return view ('attendance.create');
+    public function index()
+    {
+
+        $students = Student::all();
+        return view('attendance.create', ['students' => $students]);
     }
 }

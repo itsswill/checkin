@@ -32,8 +32,19 @@
                     @foreach($students as $student)
                         <form role="form" action="/attendance/create" method="post">
                         <tr>
-                            <td><input type="checkbox" name="checkin" value="in"></td>
-                            <td><input type="checkbox" name="checkout" value="out"></td>
+
+                            @if($student->checkedIn)
+                                <td><input type="checkbox" checked name="checkin" value="in"></td>
+                            @else
+                                <td><input type="checkbox" name="checkin" value="in"></td>
+                            @endif
+
+                            @if($student->checkedOut)
+                                <td><input type="checkbox" checked name="checkin" value="{{ $student->checkinId }}"></td>
+                             @else
+                                <td><input type="checkbox" name="checkout" value="out"></td>
+                             @endif
+
                             <td>
                                 <select name="guardian_id" class="form-control">
                                     @foreach($student->guardians as $guardian)

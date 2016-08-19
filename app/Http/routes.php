@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/', 'WelcomeController@index');
+
 Route::get('student/create', 'StudentController@index');
 Route::post('students/create', 'StudentController@store');
 

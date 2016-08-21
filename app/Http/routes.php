@@ -11,13 +11,23 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
 
-Route::get('student/create', 'StudentController@index');
-Route::post('students/create', 'StudentController@store');
+//Authenticated Routes
+Route::group(['middleware' => 'auth'], function () {
 
-Route::get('guardian/create', 'GuardianController@index');
-Route::post('guardian/create', 'GuardianController@store');
+    Route::get('/', 'WelcomeController@index');
 
-Route::get('attendance/create', 'AttendanceController@index');
-Route::post('attendance/create', 'AttendanceController@store');
+    Route::get('student/create', 'StudentController@index');
+    Route::post('students/create', 'StudentController@store');
+
+    Route::get('guardian/create', 'GuardianController@index');
+    Route::post('guardian/create', 'GuardianController@store');
+
+    Route::get('attendance/create', 'AttendanceController@index');
+    Route::post('attendance/create', 'AttendanceController@store');
+
+});
+
+//Handles authentication
+Route::auth();
+Route::get('/home', 'HomeController@index');

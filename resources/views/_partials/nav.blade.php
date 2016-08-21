@@ -22,5 +22,11 @@
                         <span class="font-bold">Attendance</span>
                     </a>
                 </li>
+                <li>
+                    <a href="/logout">
+                        <i class="icon icon-logout text-info-lter"></i>
+                        <span class="font-bold">Logout</span>
+                    </a>
+                </li>
             </ul>
           </nav>

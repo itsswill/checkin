@@ -82,6 +82,7 @@ class AttendanceController extends Controller
             $attendance->checkout = $checkout;
             $attendance->comment = $comment;
             $attendance->save();
+            return redirect()->action('StudentController@index');
         }
 
 

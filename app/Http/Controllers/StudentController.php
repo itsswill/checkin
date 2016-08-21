@@ -28,5 +28,7 @@ class StudentController extends Controller
         $student->last_name = $lastName;
         $student->dob = $dob;
         $student->save();
+        return redirect()->action('GuardianController@index');
     }
 }
+

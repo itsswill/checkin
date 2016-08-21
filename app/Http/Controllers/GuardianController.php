@@ -51,6 +51,7 @@ class GuardianController extends Controller
             $attach->student_id = $student;
             $attach->guardian_id = $guardian->id;
             $attach->save();
+            return redirect()->action('AttendanceController@index');
         }
     }
 

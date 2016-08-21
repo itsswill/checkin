@@ -14,7 +14,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
-
+    <link rel="stylesheet" href="{{ asset('css/font.css')  }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/app.css')  }}" type="text/css" />
     <style>
         body {
             font-family: 'Lato';
@@ -26,7 +27,7 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top m-b-xxl bg-dark">
         <div class="container">
             <div class="navbar-header">
 
@@ -39,7 +40,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" style="color:#FFF;" href="{{ url('/') }}">
                     Daycare System
                 </a>
             </div>

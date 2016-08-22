@@ -2,6 +2,20 @@
 @section('content')
 
     <div class="wrapper-md">
+        <!--Begin Alert Message-->
+        <div col="row">
+            <div class="col-md-12">
+                @if (!$errors->isEmpty())
+                    <div class="alert alert-danger">
+                        @foreach ($errors->all() as $error)
+                            {{ $error }}<br>
+                        @endforeach
+                    </div>
+                @endif
+            </div>
+        </div>
+        <!--End Alert Message -->
+
         <div class="row">
             <div class="col-sm-6">
                 <div class="panel panel-default">
@@ -13,42 +27,42 @@
 
                             <div class="form-group">
                                 <label>First Name</label>
-                                <input type="text" name="first_name" class="form-control" placeholder="">
+                                <input type="text" name="first_name" class="form-control" placeholder="" value="{{ old('first_name') }}">
                             </div>
 
                             <div class="form-group">
                                 <label>Last Name</label>
-                                <input type="text" name="last_name" class="form-control" placeholder="">
+                                <input type="text" name="last_name" class="form-control" placeholder="" value="{{ old('last_name') }}">
                             </div>
 
                             <div class="form-group">
                                 <label>Date of Birth</label>
-                                <input type="text" name="dob" class="form-control" placeholder="">
+                                <input type="text" name="dob" class="form-control" placeholder="" value="{{ old('dob') }}">
                             </div>
 
                             <div class="form-group" >
                                 <label>Address</label>
-                                <input type="text" name="address" class="form-control" placeholder="">
+                                <input type="text" name="address" class="form-control" placeholder="" value="{{ old('address') }}">
                             </div>
 
                             <div class="form-group" >
                                 <label>City</label>
-                                <input type="text" name="city" class="form-control" placeholder="">
+                                <input type="text" name="city" class="form-control" placeholder="" value="{{ old('city') }}">
                             </div>
 
                             <div class="form-group" >
                                 <label>Province/State</label>
-                                <input type="text" name="province" class="form-control" placeholder="">
+                                <input type="text" name="province" class="form-control" placeholder="" value="{{ old('province') }}">
                             </div>
 
                             <div class="form-group" >
                                 <label>Postal Code</label>
-                                <input type="text" name="postal_code" class="form-control" placeholder="">
+                                <input type="text" name="postal_code" class="form-control" placeholder="" value="{{ old('postal_code') }}">
                             </div>
 
                             <div class="form-group" >
                                 <label>Phone Number</label>
-                                <input type="text" name="phone_number" class="form-control" placeholder="">
+                                <input type="text" name="phone_number" class="form-control" placeholder="" value="{{ old('phone_number') }}">
                             </div>
 
                             <input type="hidden" name="_method" value="POST">

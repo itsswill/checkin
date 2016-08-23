@@ -51,7 +51,7 @@ class GuardianController extends Controller
 
         if(!$studentIds){
             return redirect('guardian/create')
-                ->withErrors(['errors' => ['Please select a child']])
+                ->withErrors(['errors' => ['Please select your child on the list']])
                 ->withInput();
         }
 

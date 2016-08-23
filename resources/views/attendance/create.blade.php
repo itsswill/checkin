@@ -8,7 +8,19 @@
                 <div class="font-bold">Check In / Check Out</div>
             </div>
         </div>
-
+        <!--Begin Alert Message-->
+        <div class="row">
+            <div class="col-md-12">
+                @if (!$errors->isEmpty())
+                    <div class="alert alert-danger">
+                        @foreach ($errors->all() as $error)
+                            {{ $error }}<br>
+                        @endforeach
+                    </div>
+                @endif
+            </div>
+        </div>
+        <!--End Alert Message -->
         <div class="row">
             <div class="col-sm-12">
                 <table class="table table-striped m-b-none">
@@ -32,18 +44,20 @@
                     @foreach($students as $student)
                         <form role="form" action="/attendance/create" method="post">
                         <tr>
-
-                            @if($student->checkedIn)
-                                <td><input type="checkbox" checked name="checkin" value="in"></td>
-                            @else
-                                <td><input type="checkbox" name="checkin" value="in"></td>
+                            @if($student->isCheckedIn && !$student->isCheckedOut)
+                                <td><input type="checkbox" checked name="checkin" value="{{ $student->recordId  }}"></td>
+                                <td><input type="checkbox" name="checkout" value="{{ $student->recordId  }}"></td>
                             @endif
 
-                            @if($student->checkedOut)
-                                <td><input type="checkbox" checked name="checkin" value="{{ $student->checkinId }}"></td>
-                             @else
-                                <td><input type="checkbox" name="checkout" value="out"></td>
-                             @endif
+                            @if($student->isCheckedIn && $student->isCheckedOut)
+                                    <td><input type="checkbox" checked name="checkin" value="in"></td>
+                                    <td><input type="checkbox" checked name="checkout" value="out"></td>
+                            @endif
+
+                                @if(!$student->isCheckedIn && !$student->isCheckedOut)
+                                    <td><input type="checkbox" name="checkin" value="in"></td>
+                                    <td><input type="checkbox" name="checkout" value="out"></td>
+                                @endif
 
                             <td>
                                 <select name="guardian_id" class="form-control">

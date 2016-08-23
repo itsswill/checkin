@@ -3,7 +3,7 @@
 
     <div class="wrapper-md">
         <!--Begin Alert Message-->
-        <div col="row">
+        <div class="row">
             <div class="col-md-12">
                 @if (!$errors->isEmpty())
                     <div class="alert alert-danger">

@@ -9,6 +9,7 @@ use App\Guardian;
 use App\GuardianStudent;
 use App\Student;
 use Carbon\Carbon;
+use Validator;
 
 class GuardianController extends Controller
 {
@@ -30,6 +31,31 @@ class GuardianController extends Controller
         $postalCode = $request->input('postal_code');
         $phoneNumber = $request->input('phone_number');
         $studentIds = $request->input('student_ids');
+
+        $validator = Validator::make($request->all(), [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'dob' => 'required|date',
+            'address' => 'required',
+            'city' => 'required',
+            'province' => 'required',
+            'postal_code' => 'required',
+            'phone_number' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('guardian/create')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        if(!$studentIds){
+            return redirect('guardian/create')
+                ->withErrors(['errors' => ['Please select your child on the list']])
+                ->withInput();
+        }
+
+
         $studentIds = explode('|', $studentIds); //array studentIds
 
 
